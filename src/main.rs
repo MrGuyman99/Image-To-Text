@@ -17,6 +17,7 @@ pub struct ImageValue{
     #[arg(short, long, default_value_t = 3)]
     scale: u32,
 
+    // Saving to a file
     #[arg(short,long)]
     file: bool,
 }
