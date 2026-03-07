@@ -57,6 +57,7 @@ fn get_image(dir: &str, scale: u32, save: bool){
                     // Prints the ASCII charecter based on the given intentsity value
                     print!("{}", get_str_ascii(intent));
                 }
+                // Adds the current intent value to the total string
                 else{
                     total_text.push_str(get_str_ascii(intent));
                 }
@@ -67,12 +68,15 @@ fn get_image(dir: &str, scale: u32, save: bool){
             if save == false{
                 println!("");
             }
+            // Adds a new line to the total String value
             else{
                 total_text.push_str("\n");
             }
         }
     }
 
+    // If we want to save to a text file, we take all the data we've stored in total_text and push it to
+    // save_image
     if save == true{
         save_image(total_text);
     }
