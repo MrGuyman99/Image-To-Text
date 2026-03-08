@@ -1,7 +1,7 @@
 // This was all a test to get more practice in rust!
 // The website where this code was found at is below
 // https://dev.to/abhishek2010devsingh/ascii-art-code-in-rust-48hn#:~:text=Full%20code,%7B%20for%20x%20in%200..
-// The only credit I take in making this is adding the ability so save to a file
+// The only credit I take in making this is adding the ability so save to a file & colored text
 use clap::Parser;
 use image::{DynamicImage, GenericImageView};
 use std::fs;
