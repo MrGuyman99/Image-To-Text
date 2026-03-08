@@ -5,6 +5,7 @@
 use clap::Parser;
 use image::{DynamicImage, GenericImageView};
 use std::fs;
+use colored::Colorize;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -56,7 +57,8 @@ fn get_image(dir: &str, scale: u32, save: bool){
                 }
                 if save == false{
                     // Prints the ASCII charecter based on the given intentsity value
-                    print!("{}", get_str_ascii(intent));
+                    // .truecolor takes the RGB values and prints out colored text
+                    print!("{}", get_str_ascii(intent).truecolor(pix[0], pix[1], pix[2]));
                 }
                 // Adds the current intent value to the total string
                 else{
